@@ -47,15 +47,19 @@ class League_game_analyse():
 
         return pd.concat(frames).value_counts()[:5].index.tolist()
 
+    def display_wins_per_teams(df: pd.DataFrame):
+        return None
+
 
 if __name__ == "__main__":
     analyse: League_game_analyse = League_game_analyse()
     file: pd.DataFrame = analyse.catch_csv(sys.argv[1])
     # number = int(sys.argv[2])
+    print(file)
     # print(analyse.display_n_line_csv(file, number))
     # print(analyse.number_of_games(file))
     # print(analyse.number_of_games_lfl(file))
     # print(analyse.redside_winrate(file))
     # print(analyse.list_equip_lfl(file))
     # print(analyse.top_pick_mid(file))
-    print(analyse.ranking_all_pick(file))
+    # print(analyse.ranking_all_pick(file))
